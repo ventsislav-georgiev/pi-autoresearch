@@ -1,23 +1,21 @@
 {
   "name": "pi-autoresearch",
-  "version": "1.0.0",
-  "description": "Autonomous experiment loop for pi — run, measure, keep or discard. Inspired by karpathy/autoresearch.",
+  "version": "2.0.0",
+  "description": "Autonomous experiment loop for OpenCode — run, measure, keep or discard. Inspired by karpathy/autoresearch.",
   "keywords": [
-    "pi-package"
+    "opencode-plugin"
   ],
   "license": "MIT",
-  "pi": {
-    "extensions": [
-      "./extensions"
-    ],
+  "main": "src/plugin.ts",
+  "opencode": {
     "skills": [
       "./skills"
     ]
   },
-  "peerDependencies": {
-    "@mariozechner/pi-ai": "*",
-    "@mariozechner/pi-coding-agent": "*",
-    "@mariozechner/pi-tui": "*",
-    "@sinclair/typebox": "*"
+  "dependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
   }
 }
